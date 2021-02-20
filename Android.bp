@@ -13,7 +13,7 @@
 // limitations under the License.
 
 
-filegroup {
+
     name: "opt-telephony-srcs",
     srcs: [
         "src/java/android/telephony/**/*.java",
@@ -21,14 +21,14 @@ filegroup {
     path: "src/java",
 }
 
-filegroup {
+{
     name: "opt-telephony-htmls",
     srcs: [
         "src/java/android/telephony/**/*.html",
     ],
 }
 
-filegroup {
+{
     name: "opt-telephony-common-srcs",
     srcs: [
         "src/java/**/*.java",
@@ -36,12 +36,12 @@ filegroup {
     path: "src/java",
 }
 
-filegroup {
+{
     name: "jarjar-rules-shared",
     srcs: ["jarjar-rules-shared.txt"],
 }
 
-genrule {
+{
     name: "statslog-telephony-java-gen",
     tools: ["stats-log-api-gen"],
     cmd: "$(location stats-log-api-gen) --java $(out) --module telephony"
@@ -49,7 +49,7 @@ genrule {
     out: ["com/android/internal/telephony/TelephonyStatsLog.java"],
 }
 
-java_library {
+{
     name: "telephony-common",
     installable: true,
 
